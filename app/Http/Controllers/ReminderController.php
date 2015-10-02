@@ -31,6 +31,9 @@ class ReminderController extends Controller
     	$reminder = Input::get('reminder');
     	$offset = ($offset <= 0) ? 0 : $offset;
 
+        // Add feature:
+        // Previous date should not be allowed
+
     	Mail::later($offset, 'emails.remind', compact('reminder'), function ($message) use ($address) {
     		$message->from('reminder@wansi.com', 'Wansi Reminder System');
 			$message->to($address, $name = null);
