@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Pheanstalk\Pheanstalk;
+use App\Http\Requests\PostRequest;
 
 use Input;
 use Mail;
@@ -15,8 +16,10 @@ use Carbon\Carbon;
 
 class ReminderController extends Controller
 {
-    public function setReminder()
+    public function setReminder(PostRequest $request)
     {
+        $request->all();
+
     	// Set offset (in seconds)
     	$date = Input::get('date');
     	$time = Input::get('time');
@@ -36,7 +39,7 @@ class ReminderController extends Controller
         }
 
     	Mail::later($offset, 'emails.remind', compact('reminder'), function ($message) use ($address) {
-    		$message->from('reminder@wansi.com', 'Wansi Reminder System');
+    		$message->from(env('FROM_EMAIL'), env('FROM_NAME'));
 			$message->to($address, $name = null);
 		});
 

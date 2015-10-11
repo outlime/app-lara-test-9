@@ -14,10 +14,11 @@
 </head>
 <body>
 	<div class="container">
-		@include('partials.messages')
-
 		<h1>Reminder System</h1>
 		<div class="jumbotron">
+			{{-- Error Messages --}}
+			@include('partials.messages')
+			
 			{{-- Input form --}}
 			<form method="POST" action="newpost">
 		        <input type="hidden" name="_token" value="{{ csrf_token() }}">
