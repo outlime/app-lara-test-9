@@ -14,10 +14,13 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Reminder System</h1>
+		
 		<div class="jumbotron">
 			{{-- Error Messages --}}
 			@include('partials.messages')
+
+			<h2>Reminder System</h2>
+			<hr>
 			
 			{{-- Input form --}}
 			<form method="POST" action="newpost">

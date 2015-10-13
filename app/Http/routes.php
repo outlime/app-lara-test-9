@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
 Queue::getIron()->ssl_verifypeer = false;
 
 Route::get('/', function () {
