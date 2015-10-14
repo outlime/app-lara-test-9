@@ -9,6 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/jumbotron-narrow.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/add.css') }}">	
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+	
 
 	<title>Reminderz</title>
 </head>
