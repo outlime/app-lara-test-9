@@ -42,7 +42,7 @@
 		        </div>
 		        <hr>
 		        <div class="form-group">
-		            <button type="submit" class="btn btn-primary">Remind Me!</button>
+		            <button type="submit" class="btn btn-remind">Remind Me!</button>
 		        </div>
 		    </form>
 	    </div>
