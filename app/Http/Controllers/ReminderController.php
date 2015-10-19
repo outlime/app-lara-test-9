@@ -41,6 +41,7 @@ class ReminderController extends Controller
     	Mail::later($offset, 'emails.remind', compact('reminder'), function ($message) use ($address) {
     		$message->from(env('FROM_EMAIL'), env('FROM_NAME'));
 			$message->to($address, $name = null);
+            $message->subject('Reminder from Remsys');
 		});
 
 		Session::flash('flash_success', 'Your reminder has been set!');

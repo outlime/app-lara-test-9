@@ -47,6 +47,8 @@
 		    </form>
 	    </div>
 
+	    <h4 class="foot">Copyright &copy; 2015 Wansi.</h4>
+
 	</div>
 
 	<script src="{{ URL::asset('js/jquery.min.js') }}"></script>

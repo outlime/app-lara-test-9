@@ -1,11 +1,18 @@
-body{
+body {
 	background-color:#006064;
 }
-.btn-remind{
+
+.btn-remind {
 	background-color: #0097a7;
 	color: #fff;
 }
-h2{
+
+h2, h4 {
 	font-family: "Titillium Web";
 	align: center;
+}
+
+.foot {
+	color: #fff;
+	text-align: center;
 }
